@@ -1,0 +1,164 @@
+{
+    "index_patterns": ["weatherdata*"],
+    "settings": {
+      "index.number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "base": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "clouds": {
+          "properties": {
+            "all": {
+              "type": "long"
+            }
+          }
+        },
+        "cod": {
+          "type": "long"
+        },
+        "coord": {
+          "type": "geo_point"
+        },
+        "dt": {
+          "type": "date",
+          "format": "epoch_second"
+        },
+        "id": {
+          "type": "long"
+        },
+        "main": {
+          "properties": {
+            "feels_like": {
+              "type": "float"
+            },
+            "grnd_level": {
+              "type": "long"
+            },
+            "humidity": {
+              "type": "long"
+            },
+            "pressure": {
+              "type": "long"
+            },
+            "sea_level": {
+              "type": "long"
+            },
+            "temp": {
+              "type": "float"
+            },
+            "temp_max": {
+              "type": "float"
+            },
+            "temp_min": {
+              "type": "float"
+            }
+          }
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "rain": {
+          "properties": {
+            "1h": {
+              "type": "float"
+            },
+            "3h": {
+              "type": "float"
+            }
+          }
+        },
+        "sys": {
+          "properties": {
+            "country": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "id": {
+              "type": "long"
+            },
+            "sunrise": {
+              "type": "long"
+            },
+            "sunset": {
+              "type": "long"
+            },
+            "type": {
+              "type": "long"
+            }
+          }
+        },
+        "timezone": {
+          "type": "long"
+        },
+        "visibility": {
+          "type": "long"
+        },
+        "weather": {
+          "properties": {
+            "description": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "icon": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "id": {
+              "type": "long"
+            },
+            "main": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        },
+        "wind": {
+          "properties": {
+            "deg": {
+              "type": "long"
+            },
+            "gust": {
+              "type": "float"
+            },
+            "speed": {
+              "type": "float"
+            }
+          }
+        }
+      }
+    }
+  }
